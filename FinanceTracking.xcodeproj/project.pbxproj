@@ -12,6 +12,7 @@
 		EA9D84DF2C782CDB005AB450 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D84DE2C782CDB005AB450 /* Item.swift */; };
 		EA9D84E12C782CDC005AB450 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9D84E02C782CDC005AB450 /* Assets.xcassets */; };
 		EA9D84E42C782CDC005AB450 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9D84E32C782CDC005AB450 /* Preview Assets.xcassets */; };
+		EA9D84EB2C7AB3E6005AB450 /* IconBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9D84EA2C7AB3E6005AB450 /* IconBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		EA9D84DE2C782CDB005AB450 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EA9D84E02C782CDC005AB450 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA9D84E32C782CDC005AB450 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA9D84EA2C7AB3E6005AB450 /* IconBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				EA9D84DA2C782CDB005AB450 /* FinanceTrackingApp.swift */,
 				EA9D84DC2C782CDB005AB450 /* ContentView.swift */,
+				EA9D84EA2C7AB3E6005AB450 /* IconBuilder.swift */,
 				EA9D84DE2C782CDB005AB450 /* Item.swift */,
 				EA9D84E02C782CDC005AB450 /* Assets.xcassets */,
 				EA9D84E22C782CDC005AB450 /* Preview Content */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA9D84EB2C7AB3E6005AB450 /* IconBuilder.swift in Sources */,
 				EA9D84DD2C782CDB005AB450 /* ContentView.swift in Sources */,
 				EA9D84DF2C782CDB005AB450 /* Item.swift in Sources */,
 				EA9D84DB2C782CDB005AB450 /* FinanceTrackingApp.swift in Sources */,
@@ -271,13 +275,15 @@
 		EA9D84E82C782CDC005AB450 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-Debug";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FinanceTracking/Preview Content\"";
+				DEVELOPMENT_TEAM = S2JF75WQY5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "FinTracker DEBUG";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -288,7 +294,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lngsv.FinanceTracking;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lngsv.FinanceTrackingDebug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -304,8 +310,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"FinanceTracking/Preview Content\"";
+				DEVELOPMENT_TEAM = S2JF75WQY5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FinTracker;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
