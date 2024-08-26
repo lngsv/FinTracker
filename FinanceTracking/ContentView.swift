@@ -38,7 +38,14 @@ struct ContentView: View {
                 .onDelete(perform: deleteItems)
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .topBarLeading) {
+                    ShareLink(
+                        item: generateCSV()
+                    ) {
+                        Text("Export CSV")
+                    }
+                }
+                ToolbarItem(placement: .topBarTrailing) {
                     EditButton()
                 }
                 ToolbarItem {
@@ -66,6 +73,36 @@ struct ContentView: View {
         }
 
         return ("0", .gray)
+    }
+
+    func generateCSV() -> URL {
+        var fileURL: URL!
+        // heading of CSV file.
+        let heading = "date,score\n"
+
+        // file rows
+        let rows = items.map { "\($0.date.formatted(Date.FormatStyle(date: .numeric))),\($0.score)" }
+
+        // rows to string data
+        let stringData = heading + rows.joined(separator: "\n")
+
+        do {
+
+            let path = try FileManager.default.url(for: .documentDirectory,
+                                                   in: .allDomainsMask,
+                                                   appropriateFor: nil,
+                                                   create: false)
+
+            fileURL = path.appendingPathComponent("CreditScore.csv")
+
+            // append string data to file
+            try stringData.write(to: fileURL, atomically: true , encoding: .utf8)
+            print(fileURL!)
+
+        } catch {
+            print("error generating csv file")
+        }
+        return fileURL
     }
 
 
